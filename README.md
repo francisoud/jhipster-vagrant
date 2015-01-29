@@ -32,7 +32,7 @@ scp -r default:** /path/to/my/project/folder
 cp Vagrantfile /path/to/my/project/folder
 git commit ... push
 ```
-### You are retrieve a jhipster / vagrant project create by someone else
+### You are retrieving a jhipster / vagrant project create by someone else
 ```
 git clone (repo with the Vagrantfile in it and the jhipster folders)
 vagrant up
