@@ -20,23 +20,19 @@ vagrant ssh
 ### You are the first person to start the project
 In the vagrant box 
 ```
-yo jhipster
+vagrant@vagrant-ubuntu-trusty-64:/vagrant$ yo jhipster
 // follow instrucutions
 exit
 ```
 
-```
-vagrant ssh-config
-copy paste content in ~/.ssh/config
-scp -r default:** /path/to/my/project/folder
-cp Vagrantfile /path/to/my/project/folder
-git commit ... push
-```
+On your host machine: git add, commit, push
+
 ### You are retrieving a jhipster / vagrant project create by someone else
 ```
 git clone (repo with the Vagrantfile in it and the jhipster folders)
 vagrant up
 ```
+
 ## Under the hood
 
 Basically it just scripting that does this:
