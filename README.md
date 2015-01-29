@@ -4,10 +4,39 @@ Vagrant configuration to setup a http://jhipster.github.io/ projet using ubuntu/
 Based on instructions at: http://jhipster.github.io/installation.html
 
 ## Content
-```standalone/``` contains a vagrant conf with jhispter directly usable in ubuntu
+```jhipster-standalone/``` contains a vagrant conf with jhispter directly usable in ubuntu
 
-```docker/``` contains a vagrant conf with https://github.com/jhipster/jhipster-docker embedded in it
+```jhipster-docker/``` contains a vagrant conf with https://github.com/jhipster/jhipster-docker embedded in it
 
+## Setup
+Copy the Vagrantfile somewhere
+
+```
+vagrant up
+// ... long setup...
+vagrant ssh
+```
+
+### You are the first person to start the project
+In the vagrant box 
+```
+yo jhipster
+// follow instrucutions
+exit
+```
+
+```
+vagrant ssh-config
+copy paste content in ~/.ssh/config
+scp -r default:** /path/to/my/project/folder
+cp Vagrantfile /path/to/my/project/folder
+git commit ... push
+```
+### You are retrieve a jhipster / vagrant project create by someone else
+```
+git clone (repo with the Vagrantfile in it and the jhipster folders)
+vagrant up
+```
 ## Under the hood
 
 Basically it just scripting that does this:
